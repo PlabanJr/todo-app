@@ -1,0 +1,129 @@
+.list__wrapper {
+  padding: 1.5rem 0;
+}
+
+.task__creator {
+  display: flex;
+  gap: 1rem;
+}
+
+.task__creator > input {
+  background-color: white;
+  width: 40%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--accent-color);
+  padding: 0 1rem;
+  color: var(--primary-text-color);
+  font-size: 1rem;
+}
+
+.task__creator > button:focus,
+.task__creator > input:focus {
+  outline: none;
+}
+
+.task__creator > button {
+  background-color: white;
+  border: 1px solid var(--accent-color);
+  color: var(--primary-text-color);
+
+  transition: background-color 200ms;
+}
+
+.task__creator > button:hover {
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.list {
+  list-style-type: none;
+  padding: 1rem 0;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  transition: background-color 300ms;
+  border-radius: 0.5rem;
+}
+
+.list__item__left {
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  grid-template-columns: 2rem 1fr;
+  line-break: anywhere;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.list__item:hover {
+  background-color: #f9f5e7;
+  border-radius: 0.25rem;
+}
+
+.toggle {
+  background-color: white;
+  height: 1.2rem;
+  width: 1.2rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.done > .list__item__left > .toggle {
+  background-color: var(--accent-color);
+}
+
+.done > .list__item__left > p {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.list > li:not(:last-child) {
+  border-bottom: 1px solid #f9f5e7;
+}
+
+.list__item__right {
+  display: flex;
+  gap: 1rem;
+}
+
+.star {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  padding: 0.25rem;
+}
+
+.star.important {
+  color: var(--accent-color);
+  fill: black;
+}
+
+.delete {
+  background-color: transparent;
+  border: none;
+  color: red;
+  padding: 0.25rem;
+}
+
+.delete:focus,
+.star:focus {
+  outline: none;
+}
+
+.empty__section {
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
